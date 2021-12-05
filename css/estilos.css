@@ -29,10 +29,20 @@ html{
 }
 
 body{
-    background: #39c5cb;
+    background: #373741;
     padding-left: 30rem;
 }
 
+body.active{
+    --black:#fff;
+    --light-color:#ddd;
+    --bg-color:#222;
+    --border:.1rem solid rgba(0,0,0,.4);
+    --box-shadow:.4rem .4rem 1rem #111,
+                -.4rem -.4rem 1rem #333;
+    --box-shadow-inset:.4rem .4rem 1rem #111 inset,
+                      -.4rem -.4rem 1rem #333 inset;
+}
 
 section{
     min-height: 100vh;
@@ -48,13 +58,12 @@ section{
     cursor: pointer;
     background: none;
     color:#fdf9e2;
-    border: 1px solid #ff9f32;
 }
 
 .btn:hover{
     background-color:#fdf9e2 ;
-    border: 1px solid #ff9f32;;
-    color:#ff9f32;;
+    border: 1px solid #bc815d;
+    color:#bc815d;
 }
 
 .heading{
@@ -66,7 +75,7 @@ section{
 }
 
 .heading span{
-    color: #ffbc6f;
+    color: #bc815d;;
     text-transform: uppercase;
 }
 
@@ -74,7 +83,7 @@ section{
     position: fixed;
     top:0; left: 0;
     z-index: 999;
-    background: #d6fffc;
+    background: #fdf9e2;
     width: 30rem;
     border-right: var(--border);
     height: 100%;
@@ -97,7 +106,7 @@ section{
 }
 
 .header .user p{
-    color: #ffbc6f;
+    color: #bc815d;
     font-size: 1.5rem;
 }
 
@@ -111,14 +120,14 @@ section{
     padding:.7rem;
     border-radius: 5rem;
     font-size: 2rem;
-    border: 1px solid #ffbc6f;
+    border: 1px solid #bc815d;
     color:var(--black);
 }
 
 .header .navbar a:hover{
-    border: 1px solid #ffbc6f;
+    border: 1px solid #bc815d;
     background-color: rgb(255, 238, 208);
-    color: #ff9f32;
+    color: #bc815d;
 }
 
 #menu-btn{
@@ -181,7 +190,7 @@ section{
 
 .home .content p{
     font-size: 2rem;
-    color: #ffbc6f;
+    color: #bc815d;
     padding-bottom: .5rem;
 }
 
@@ -190,14 +199,14 @@ section{
     top: 10rem;
     border-radius: .5rem;
     padding:1rem;
-    border: 1px solid #ffbc6f;
+    border: 1px solid #bc815d;
 }
 
 .home .share a{
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
-    border: 1px solid #ffbc6f;
+    border: 1px solid #bc815d;
     margin:.5rem;
     font-size: 2rem;
     color: #fdf9e2;
@@ -205,8 +214,25 @@ section{
 }
 
 .home .share a:hover{
-    box-shadow: var(--box-shadow-inset);
-    color:#ff9f32;;
+    background-color: #ffff;
+    color:#bc815d;
+}
+
+.links {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border: 1px solid #bc815d;
+    margin:.5rem;
+    font-size: 3rem;
+    color: #fdf9e2;
+    border-radius: .5rem;
+}
+
+.links:hover{
+    background-color: #ffff;
+    color:#bc815d;
+    border: 2px solid #bc815d;
 }
 
 .about .row{
@@ -360,7 +386,7 @@ section{
     top:0; left: 0;
     height: 100%;
     width: 100%;
-    background: #ff9f32;
+    background: #bc815d;;
     z-index: -1;
     clip-path: circle(9rem at 5% 0%);
     transition: .3s linear;
@@ -376,7 +402,7 @@ section{
 
 .portfolio .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(70rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
     gap:2rem;
 }
 
@@ -407,12 +433,11 @@ section{
 
 .portfolio .box-container .box:hover .content{
     transform: scale(1);
-    background-color: #ffbc6f;
 }
 
 .portfolio .box-container .box .content h3{
     font-size: 2.5rem;
-    color: #fff;
+    color:var(--black);
     text-transform: uppercase;
     transform: translateY(-5rem);
     opacity: 0;
@@ -424,11 +449,19 @@ section{
     opacity: 1;
 }
 
+.contact {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .contact form{
     margin:1rem auto;
     max-width: 70rem;
     border-radius: .5rem;
-    border: 1px solid #ff9f32;
+    border: 1px solid #bc815d;
     padding:2rem;
 }
 
@@ -440,7 +473,7 @@ section{
     font-size: 1.6rem;
     text-transform: none;
     margin:.7rem 0;
-    border: 1px solid #ff9f32;
+    border: 1px solid #bc815d;
     border-radius: .5rem;
 }
 
@@ -450,7 +483,7 @@ section{
 }
 
 .contact form .box:focus{
-    border: 1px solid #ff9f32;
+    border: 1px solid #bc815d;
 }
 
 .credits{
@@ -463,7 +496,7 @@ section{
 }
 
 .credits span{
-    color: #ff9f32;
+    color: #bc815d;
 }
 
 
@@ -520,4 +553,3 @@ section{
     }
 
 }
-
